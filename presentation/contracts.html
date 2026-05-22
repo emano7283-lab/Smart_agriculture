@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contract - Smart Property</title>
+<link rel="stylesheet" href="contracts.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="head">
+    <div class="logo"><h1>Smart<span>Property</span></h1></div>
+    <a class="but" href="home.html">Home</a>
+</div>
+
+<!-- HERO -->
+<div class="sect">
+    <div class="overlay">
+        <div class="info">
+            <h2>Property Contract</h2>
+            <p>Complete your agreement securely</p>
+        </div>
+    </div>
+</div>
+
+<!-- CONTRACT SECTION -->
+<div class="contract-section">
+
+    <!-- PROPERTY DETAILS -->
+    <div class="property-summary">
+        <img id="propertyImage" src="" alt="Property Image">
+        <div class="property-details">
+            <h2 id="propertyName"></h2>
+            <p><b>Type:</b> <span id="propertyType"></span></p>
+            <p><b>Price:</b> <span id="propertyPrice"></span></p>
+            <p><b>Location:</b> <span id="propertyLocation"></span></p>
+            <p><b>Description:</b> <span id="propertyDescription"></span></p>
+            <p><b>Owner:</b> <span id="ownerName"></span></p>
+            <p><b>Owner National ID:</b> <span id="ownerNationalId"></span></p>
+        </div>
+    </div>
+
+    <!-- CONTRACT TEXT -->
+    <div id="contractText" class="contract-note">
+        The contract will appear here.
+    </div>
+
+    <!-- CONTRACT FORM -->
+    <form id="contractForm">
+        <input type="hidden" id="propertyId">
+        <input type="hidden" id="contractType">
+
+        <div class="section-title">Buyer Information</div>
+
+        <div class="form-group">
+            <label>Full Name</label>
+            <input type="text" id="clientName" required>
+        </div>
+
+        <div class="form-group">
+            <label>National ID</label>
+            <input type="text" id="clientNationalId" required>
+        </div>
+
+        <div class="form-group">
+            <label>Phone</label>
+            <input type="tel" id="phoneNumber" required>
+        </div>
+
+        <div class="form-group">
+            <label>Email</label>
+            <input type="email" id="userEmail" required>
+        </div>
+
+        <div class="form-group">
+            <label>Payment Method</label>
+            <select id="paymentMethod">
+                <option>Cash</option>
+                <option>Bank Transfer</option>
+                <option>Installments</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>Start Date</label>
+            <input type="date" id="startDate" required>
+        </div>
+
+        <div class="form-group" id="durationGroup">
+            <label>Duration (Months)</label>
+            <input type="number" id="duration" min="1">
+        </div>
+
+        <button type="submit">Confirm Contract</button>
+    </form>
+
+    <div id="resultMessage"></div>
+</div>
+
+<script src="/logic/contracts.js"></script>
+</body>
+</html>

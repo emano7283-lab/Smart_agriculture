@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smart Property — Owner Dashboard</title>
+    <link rel="stylesheet" href="property.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+    <div class="all">
+      <!-- HEADER -->
+      <div class="heade">
+        <img src="/images/5983171464225557494_120.jpg" class="logo-img" />
+        <div>
+          <span id="userBadge" style="margin-right:15px; color:#2c3e50; font-weight:600;"></span>
+          <button id="addPropertyBtn" class="addfield">Add New Property</button>
+          <a class="but" href="#" id="signOutBtn">Sign Out</a>
+        </div>
+      </div>
+
+      <!-- STATS -->
+      <div class="stats">
+        <div class="stat-card">
+          <p class="stat-label">Total Properties</p>
+          <h2 id="totalProperties">0</h2>
+        </div>
+        <div class="stat-card">
+          <p class="stat-label">Total Value</p>
+          <h2 id="totalValue">0</h2>
+        </div>
+        <div class="stat-card">
+          <p class="stat-label">Average Price</p>
+          <h2 id="avgPrice">0</h2>
+        </div>
+      </div>
+
+      <!-- MAIN -->
+<div class="section">
+
+  <!-- My Properties -->
+  <h2 class="section-title">My Properties</h2>
+  <div id="propertiesContainer" class="properties-container"></div>
+
+  <!-- Contracts on My Properties -->
+  <h2 class="section-title">Contracts on My Properties</h2>
+  <p class="section-subtitle">
+    Buyers and tenants who have signed contracts on your properties.
+  </p>
+  <div id="ownerContractsContainer" class="contracts-container"></div>
+
+  <!-- My Purchases & Rentals -->
+  <h2 class="section-title">My Purchases &amp; Rentals</h2>
+  <p class="section-subtitle">
+    Properties you have bought or rented from others.
+  </p>
+  <div id="contractsContainer" class="contracts-container"></div>
+
+</div>
+
+        <!-- Overlay -->
+        <div id="overlay" style="display: none"></div>
+
+        <!-- ADD PROPERTY FORM -->
+        <form
+          enctype="multipart/form-data"
+          id="newPropertyForm"
+          style="display: none"
+          method="POST"
+          action="/add-property"
+        >
+          <label>Owner Full Name</label>
+          <input type="text" name="ownerName" placeholder="Enter Name" required />
+
+          <label>Owner National ID</label>
+          <input type="text" name="ownerNationalId" placeholder="Enter National ID" required />
+
+          <label>Property Name</label>
+          <input type="text" name="propertyName" placeholder="Enter Property Name" required />
+
+          <label>Price</label>
+          <input type="number" name="price" placeholder="Enter Price" required />
+
+          <label>Property Type</label>
+          <select name="propertyType" required>
+            <option value="Apartment">Apartment</option>
+            <option value="House">House</option>
+            <option value="Villa">Villa</option>
+            <option value="Studio">Studio</option>
+          </select>
+
+          <label>Location</label>
+          <input type="text" name="location" placeholder="Enter Location" required />
+
+          <label>Description</label>
+          <input type="text" name="description" placeholder="Short Description" />
+
+          <label>Property Image</label>
+          <input type="file" name="image" id="imageInput" accept="image/*" />
+
+          <label>Proof of Ownership</label>
+          <input type="file" name="ownershipDocs" id="ownershipDocsInput"
+                 accept=".jpg,.png,.pdf" multiple />
+
+          <input class="s" type="submit" value="Add Property" />
+        </form>
+      </div>
+    </div>
+
+    <script src="/logic/property.js"></script>
+  </body>
+</html>

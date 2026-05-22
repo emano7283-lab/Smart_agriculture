@@ -1,0 +1,344 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* الصفحة */
+body {
+  font-family: 'Inter', Arial, sans-serif;
+  background: #f5f5f5;
+}
+
+
+/* HEADER */
+.heade {
+  padding: 1px 100px;
+  min-height: 80px;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-img {
+  height: 100px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.logo-img:hover {
+  transform: scale(1.05);
+}
+
+/* الأزرار */
+.but {
+  background-color: #2c3e50;
+  color: white;
+  border: 1px solid #ddd;
+  padding: 8px 16px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+.but:hover {
+  color: #2c3e50;
+  background-color: white;
+}
+
+.addfield {
+  border-radius: 10px;
+  font-weight: 600;
+  padding: 8px 16px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: white;
+  color: #575656;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+.addfield:hover {
+  background-color: #2c3e50;
+  color: white;
+}
+
+/* القسم */
+.section {
+  padding: 30px;
+}
+
+/* ========================= */
+/* DASHBOARD (ROW STYLE) */
+/* ========================= */
+
+#propertiesContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 0 60px;
+}
+
+/* CARD (ROW) */
+.fieldCard {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background: white;
+  padding: 15px 20px;
+
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+
+  transition: 0.2s;
+}
+
+.fieldCard:hover {
+  transform: translateY(-3px);
+}
+
+/* TEXT */
+.fieldCard h3 {
+  font-size: 15px;
+  font-weight: 600;
+  color: #1f2d3d;
+  min-width: 160px;
+
+  letter-spacing: 0.2px;
+}
+
+.fieldCard p {
+  font-size: 13px;
+  color: #6b7280;   /* رمادي ناعم مثل المواقع */
+  margin: 0 8px;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ACTIONS */
+.card-actions {
+  display: flex;
+  gap: 8px;
+}
+
+/* buttons */
+.card-actions button {
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+/* view */
+.view-btn {
+  background: #2c3e50;
+  color: white;
+}
+
+/* edit */
+.edit-btn {
+  background: #f1f1f1;
+  color: #333;
+}
+
+/* delete */
+.delete-btn {
+  background: #f1f1f1;
+  color: #e74c3c;
+}
+
+/* ========================= */
+/* STATS */
+/* ========================= */
+
+.stats {
+  display: flex;
+  gap: 20px;
+  padding: 20px 60px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.stat-card {
+  flex: 1;
+  min-width: 220px;
+  background: #f9f9fb;
+  border-radius: 16px;
+  padding: 20px 25px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+  transition: 0.3s;
+}
+
+.stat-card:hover {
+  transform: translateY(-4px);
+}
+
+.stat-label {
+  font-size: 13px;
+  color: #888;
+  margin-bottom: 8px;
+}
+
+.stat-card h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #222;
+}
+
+/* ========================= */
+/* FORM */
+/* ========================= */
+
+#newPropertyForm {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 1001;
+}
+
+#newPropertyForm label {
+  font-size: 14px;
+  color: #333;
+  font-weight: 600;
+}
+
+#newPropertyForm input,
+#newPropertyForm select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+#newPropertyForm input:focus,
+#newPropertyForm select:focus {
+  border-color: #2c3e50;
+  outline: none;
+}
+
+.s {
+  margin-top: 10px;
+  background: #2c3e50;
+  color: white;
+  font-size: 16px;
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.s:hover {
+  opacity: 0.9;
+}
+
+/* ========================= */
+/* OVERLAY */
+/* ========================= */
+
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1000;
+  display: none;
+}
+/* ===== شارة حالة العقار في لوحة المالك ===== */
+.prop-status {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 600;
+    color: #fff;
+    margin-left: 8px;
+    vertical-align: middle;
+    letter-spacing: .5px;
+}
+.prop-status.available { background: #2ecc71; }
+.prop-status.sold      { background: #e74c3c; }
+.prop-status.rented    { background: #f39c12; }
+/* ===== تحسين شكل النص داخل الكرت ===== */
+
+/* ===== Section Titles ===== */
+.section-title {
+  padding: 10px 0;
+  color: #2c3e50;
+  font-size: 23px;
+  font-weight: 800;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 8px;
+}
+
+/* ===== Subtitles under titles ===== */
+.section-subtitle {
+  color: #777;
+  font-size: 13px;
+  margin-bottom: 12px;
+  line-height: 1.5;
+}
+
+/* ===== Containers ===== */
+.properties-container,
+.contracts-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 0 10px;
+}
+
+/* ===== Property / Contract Card ===== */
+.fieldCard {
+  background: #fff;
+  padding: 15px 20px;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+  transition: 0.2s;
+}
+
+.fieldCard:hover {
+  transform: translateY(-3px);
+}
+
+/* ===== Text inside cards ===== */
+.fieldCard h3 {
+  font-size: 15px;
+  font-weight: 600;
+  color: #1f2d3d;
+  margin-bottom: 6px;
+}
+
+.fieldCard p {
+  font-size: 13px;
+  color: #6b7280;
+  margin: 2px 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ===== Optional: small separator line ===== */
+.fieldCard hr {
+  border: none;
+  border-top: 1px solid #eee;
+  margin: 8px 0;
+}

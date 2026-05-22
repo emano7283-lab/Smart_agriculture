@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smart Property</title>
+    <link rel="stylesheet" href="home.css" />
+  </head>
+
+  <body>
+    <!-- HEADER -->
+    <div class="head">
+      <div class="logo">
+        <h1>Smart<span>Property</span></h1>
+      </div>
+      <div class="actions">
+        <a id="authLink" class="but" href="sign.html">Sign In</a>
+        <a
+          id="dashLink"
+          class="but"
+          href="property.html"
+          style="display: none; margin-left: 8px"
+          >Dashboard</a
+        >
+      </div>
+    </div>
+
+    <!-- HERO -->
+    <div class="sect">
+      <div class="overlay">
+        <div class="info">
+          <h2>Find Your Dream Property</h2>
+          <p>Buy, Rent and Invest easily</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- SEARCH -->
+    <div class="search-bar">
+      <input
+        id="nameInput"
+        placeholder="Property Name"
+        oninput="applySearch()"
+      />
+      <input
+        id="locationInput"
+        placeholder="Location"
+        oninput="applySearch()"
+      />
+      <input id="typeInput" placeholder="Type" oninput="applySearch()" />
+      <input id="priceInput" placeholder="Max Price" oninput="applySearch()" />
+    </div>
+
+    <!-- PROPERTIES -->
+    <div class="properties-section">
+      <div id="propertiesContainer"></div>
+    </div>
+
+    <script src="/logic/home.js"></script>
+  </body>
+</html>
